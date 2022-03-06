@@ -26,10 +26,10 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-w><C-k>", ":resize -2<CR>", opts)
+keymap("n", "<C-w><C-j>", ":resize +2<CR>", opts)
+keymap("n", "<C-w><C-h>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-w><C-l>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
@@ -42,6 +42,9 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
+
+-- Fast Save
+keymap("n", "<leader>w", ":w<CR>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -69,3 +72,12 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+
+-- Bufferline
+keymap("n", "<leader>x", ":Bdelete! %<CR>", opts)
+
+-- Telescope
+keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
+
+-- Toggleterm
+keymap("n", "<leader>t", ":ToggleTerm<CR>", opts)
