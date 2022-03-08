@@ -43,9 +43,6 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
 
--- Fast Save
-keymap("n", "<leader>w", ":w<CR>", opts)
-
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
@@ -63,21 +60,9 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
--- Terminal --
--- Better terminal navigation
--- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
--- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
--- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
--- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
--- Nvimtree
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
-
--- Bufferline
-keymap("n", "<leader>x", ":Bdelete! %<CR>", opts)
-
 -- Telescope
-keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
+keymap("n", "<C-p>", ":Telescope git_files<CR>", opts)
 
--- Toggleterm
-keymap("n", "<leader>t", ":ToggleTerm<CR>", opts)
+-- Hop
+keymap("n", "f", ":HopWord<CR>", opts)
+keymap("n", "F", ":HopLine<CR>", opts)

@@ -52,6 +52,9 @@ return packer.startup(function(use)
   use "moll/vim-bbye"
   use 'nvim-lualine/lualine.nvim'
   use "akinsho/toggleterm.nvim"
+  use "lewis6991/impatient.nvim"
+  use "lukas-reineke/indent-blankline.nvim"
+  use "folke/which-key.nvim"
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -73,9 +76,10 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
-  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  -- use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
   -- Telescope
+  use "BurntSushi/ripgrep"
   use "nvim-telescope/telescope.nvim"
 
   -- Treesitter
@@ -87,6 +91,12 @@ return packer.startup(function(use)
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+
+  -- Motion
+  use {
+    "phaazon/hop.nvim",
+    branch = 'v1', -- optional but strongly recommended
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
