@@ -64,5 +64,5 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("n", "<C-p>", ":Telescope git_files<CR>", opts)
 
 -- Hop
-keymap("n", "f", ":HopWord<CR>", opts)
-keymap("n", "F", ":HopLine<CR>", opts)
+keymap("", "f", "<cmd>HopChar1<CR>", opts)
+keymap("", "F", "<cmd>HopLine<CR>", opts)
