@@ -18,6 +18,11 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
+-- Unbind some annoying default key bindings.
+keymap("", "q?", "q:", opts)
+keymap("", "q:", "<nop>", opts)
+keymap("", "Q", "<nop>", opts)
+
 -- Normal --
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
