@@ -102,6 +102,16 @@ local mappings = {
     u = { "<cmd>PackerUpdate<cr>", "Update" },
   },
 
+  o = {
+    name = "Hop",
+    f = { "<cmd>HopChar2<cr>", "HopChar2"},
+    w = { "<cmd>HopWordAC<cr>", "Hop word forward"},
+    b = { "<cmd>HopWordBC<cr>", "Hop word backward"},
+    j = { "<cmd>HopLineAC<cr>", "Hop line below"},
+    h = { "<cmd>HopLineBC<cr>", "Hop line up"},
+    p = { "<cmd>HopPattern<cr>", "Hop regex"},
+  },
+
   g = {
     name = "Git",
     g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
@@ -156,6 +166,7 @@ local mappings = {
       "Workspace Symbols",
     },
   },
+
   s = {
     name = "Search",
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
