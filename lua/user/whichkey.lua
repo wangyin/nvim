@@ -90,7 +90,6 @@ local mappings = {
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["x"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-  ["f"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 --   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 --
   p = {
@@ -167,6 +166,8 @@ local mappings = {
     R = { "<cmd>Telescope registers<cr>", "Registers" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
+    w = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
+    g = { "<cmd>Telescope git_files theme=ivy<cr>", "Git Files" },
   },
 
   t = {

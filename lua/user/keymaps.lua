@@ -19,8 +19,6 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- Unbind some annoying default key bindings.
-keymap("", "q?", "q:", opts)
-keymap("", "q:", "<nop>", opts)
 keymap("", "Q", "<nop>", opts)
 
 -- Normal --
@@ -66,7 +64,7 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Telescope
-keymap("n", "<C-p>", ":Telescope git_files<CR>", opts)
+keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
 
 -- Hop
 keymap("", "f", "<cmd>HopChar1<CR>", opts)
