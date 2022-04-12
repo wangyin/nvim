@@ -98,7 +98,7 @@ return packer.startup(function(use)
     branch = 'v1', -- optional but strongly recommended
   }
 
-    -- Markdown Preview
+  -- Markdown Preview
   use {
     'iamcco/markdown-preview.nvim',
     ft = {'markdown'},
