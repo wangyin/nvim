@@ -77,6 +77,7 @@ return packer.startup(function(use)
   use "williamboman/mason-lspconfig.nvim"
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  use "ray-x/lsp_signature.nvim"
 
   -- Telescope
   use "BurntSushi/ripgrep"
