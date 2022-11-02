@@ -192,6 +192,24 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+
+  d = {
+    name = "Debugger",
+    c = { "<cmd>lua require'dap'.continue()<CR>", "Continue" },
+    s = { "<cmd>lua require'dap'.step_over()<CR>", "Step over" },
+    i = { "<cmd>lua require'dap'.step_into()<CR>", "Step into" },
+    r = { "<cmd>lua require'dap'.step_out()<CR>", "Step out" },
+    b = { "<cmd>lua require'dap'.toggle_breakpoint()<CR>", "Toggle breakpoint" },
+    B = { "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", "Breakpoint condition" },
+    l = { "<cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", "Log point message" },
+    q = { "<cmd>lua require'dap'.close()<cr>"
+			.. "<cmd>lua require'dap'.terminate()<CR>"
+			.. "<cmd>lua require'dap.repl'.close()<CR>"
+			.. "<cmd>lua require'dapui'.close()<CR>", "Quit" },
+    C = { "<cmd>lua require'dap'.clear_breakpoints()<CR>", "Clear breakpoints" },
+    U = { "<cmd>lua require'dapui'.toggle()<cr>", "Toggle UI" },
+    j = { "<cmd>lua require'dap.ext.vscode'.load_launchjs()<cr>", "VS Code Launch JSON"}
+  }
 }
 
 which_key.setup(setup)

@@ -79,6 +79,11 @@ return packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "ray-x/lsp_signature.nvim"
 
+  -- DAP
+  use "mfussenegger/nvim-dap"
+  use "mfussenegger/nvim-dap-python"
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+
   -- Telescope
   use "BurntSushi/ripgrep"
   use "nvim-telescope/telescope.nvim"
