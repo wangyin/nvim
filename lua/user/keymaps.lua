@@ -23,6 +23,7 @@ keymap("", "Q", "<nop>", opts)
 
 -- Normal --
 keymap("n", ";", ":", opts)
+keymap("n", "0", "^", opts)
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
